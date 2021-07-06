@@ -66,10 +66,10 @@ class Forecast {
 console.log(Forecast);
 
 
-server.get('/getMovieInfo', weatherFunction);
+server.get('/getMovieInfo', movieFunction);
 
 
-function weatherFunction(req, res) {
+function movieFunction(req, res) {
 
     let searchQuery = req.query.cityName;
 
