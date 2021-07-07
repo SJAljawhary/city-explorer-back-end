@@ -11,7 +11,6 @@ const axios = require('axios');
 const cors = require('cors');
 
 const weatherData = require('./data/weather.json');
-const { response } = require('express');
 
 const server = express();
 const PORT = process.env.PORT;
@@ -25,9 +24,9 @@ server.get('/test', (request, response) => {
     response.status(200).send('my server is working')
 })
 
-server.get('/getWeatherInfo', weatherFunction);
+server.get('/weather', weatherFunction);
 
-server.get('/getMovieInfo', movieFunction);
+server.get('/movies', movieFunction);
 
 server.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}`);
