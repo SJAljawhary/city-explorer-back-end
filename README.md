@@ -9,7 +9,6 @@
 Back-end server that serves city information using various API's , based on search queries
 
 ## Getting Started
-<!-- What are the steps that a user must take in order to build this app on their own machine and get it running? -->
 
 ## Architecture
  cors, dotenv,express, axios,Heroku 
@@ -25,11 +24,17 @@ Actual time needed to complete: 8 hours
 
 
 #### Name of feature: Lab 08 APIs
-
 Estimate of time needed to complete: 6 hrs
 Start time: 4:00 pm
 Finish time: 10:30 pm
 Actual time needed to complete: 6,5 hours
+
+
+#### Name of feature: ___Lab09 Refactoring into Modules___
+Estimate of time needed to complete: __2 hours___
+Start time: _____
+Finish time: ______
+Actual time needed to complete: ______
 
 ## Credit and Collaborations
 
