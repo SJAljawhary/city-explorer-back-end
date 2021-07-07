@@ -26,9 +26,9 @@
 Time Estimates
 
 
-Name of feature: ___Custom Servers with Node and Express___
+Name of feature: ___Refactoring into Modules___
 
-Estimate of time needed to complete: __4 hours___
+Estimate of time needed to complete: __2 hours___
 
 Start time: _____
 
