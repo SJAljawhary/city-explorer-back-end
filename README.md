@@ -32,9 +32,9 @@ Actual time needed to complete: 6,5 hours
 
 #### Name of feature: ___Lab09 Refactoring into Modules___
 Estimate of time needed to complete: __2 hours___
-Start time: _____
-Finish time: ______
-Actual time needed to complete: ______
+Start time: __1:00pm___
+Finish time: __1:45pm____
+Actual time needed to complete: __45 min____
 
 ## Credit and Collaborations
 
