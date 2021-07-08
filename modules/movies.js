@@ -1,8 +1,9 @@
 'use strict';
 
-const axios = require('axios'); 
-module.exports = movieFunction; 
+const axios = require('axios');
+module.exports = movieFunction;
 
+let inMemory = {};
 
 function movieFunction(req, res) {
 
@@ -14,18 +15,26 @@ function movieFunction(req, res) {
     //https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&${searchQuery}
 
 
-    axios.get(url).then(movieData => {
+    if (inMemory[searchQuery] !== undefined) {
+        console.log('we got the data from our server')
+        res.send(inMemory[searchQuery]);
+    } else {
+        axios.get(url).then(movieData => {
 
-      res.status(200).send(movieData.data.results.map(movie=> {
+            console.log('send request to unsplash API')
+            inMemory[searchQuery] = movieData.data.results.map((movie) => Movie(movie))
 
-            return new Movie(movie)
-        }))
-       
-    }).catch(error => {
-        res.status(500).send(error)
+            res.status(200).send(movieData.data.results.map(movie => {
+
+                return new Movie(movie)
+            }))
+
+        }).catch(error => {
+            res.status(500).send(error)
+        }
+
+        )
     }
-
-    )
 }
 class Movie {
     constructor(movie) {
