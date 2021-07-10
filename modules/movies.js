@@ -22,7 +22,7 @@ function movieFunction(req, res) {
         axios.get(url).then(movieData => {
 
             console.log('send request to unsplash API')
-            inMemory[searchQuery] = movieData.data.results.map((movie) => Movie(movie))
+            inMemory[searchQuery] = movieData.data.results.map(movie => new Movie(movie))
 
             res.status(200).send(movieData.data.results.map(movie => {
 
